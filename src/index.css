@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+.animate-marquee {
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Swiper */
+.TestmonialsSwiper {
+    padding: 20px 0;
+}
+
+.TestmonialsSwiper .swiper-slide {
+    height: auto;
+}
+
+.TestmonialsSwiper .swiper-slide-next::after,
+.TestmonialsSwiper .swiper-slide-prev::after {
+    display: none;
+}
+
+.swiper-slide-next,
+.swiper-slide-prev {
+    display: none;
+}
+
+#Swiper-button-next.swiper-button-disabled,
+#Swiper-button-prev.swiper-button-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Newsletter */
+#Newsletter .clip-path-slant {
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)
+}
