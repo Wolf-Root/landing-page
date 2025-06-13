@@ -1,11 +1,37 @@
 # A landing page created with React.js, styled with Tailwind CSS, and animated with Framer Motion.
 
+A landing page created with React.js, styled with Tailwind CSS, and animated with Framer Motion.
 
-# React + Vite + Tailwind CSS
+## Table of Contents
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My Process](#my-process)
+  - [Built With](#built-with)
+- [Author](#author)
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Screenshot
+
+![App Screenshot](/public/screenshot.png)
+
+### Links
+
+- [Live Site](https://wolf-root.github.io/React-Calculator/)
+- [React Documentation](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+## My Process
+
+### Built With
+
+- [React](https://react.dev/) v19.1
+- [Tailwind CSS](https://tailwindcss.com/) v4.1
+
+## Author
+
+- Portfolio – [yousseffed.vercel.app](https://yousseffed.vercel.app/)
+- Frontend Mentor – [@Wolf-Root](https://www.frontendmentor.io/profile/Wolf-Root)
+- Twitter – [@wolf_R00T](https://x.com/wolf_R00T)
