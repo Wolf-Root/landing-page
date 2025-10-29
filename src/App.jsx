@@ -12,27 +12,27 @@ import Newsletter from "./Components/Sections/Newsletter";
 import Footer from "./Components/Footer";
 
 function App() {
-    return (
-        <>
-            <Header />
+  return (
+    <>
+      <Header />
 
-            <main className="relative overflow-x-hidden">
-                <div className="absolute -top-20 -left-20 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-500/20 to-pink-500/20 rounded-full blur-[80px]"></div>
-                <Hero />
-                <Company />
-                <Purpose />
-                <Features />
-                <Schedule />
-                <Monitor />
-                <Pricing />
-                <Service />
-                <Testmonials />
-                <Newsletter />
-            </main>
+      <main className="relative w-full overflow-x-hidden px-5 md:px-0">
+        <div className="absolute -top-20 -left-20 size-[500px] bg-linear-to-tr from-indigo-500/20 to-pink-500/20 rounded-full blur-3xl" />
+        <Hero />
+        <Company />
+        <Purpose />
+        <Features />
+        <Schedule />
+        <Monitor />
+        <Pricing />
+        <Service />
+        <Testmonials />
+        <Newsletter />
+      </main>
 
-            <Footer />
-        </>
-    );
+      <Footer />
+    </>
+  );
 }
 
 export default App;

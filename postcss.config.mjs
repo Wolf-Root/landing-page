@@ -1,8 +1,8 @@
 export default {
-    plugins: {
-        '@tailwindcss/postcss': {},
-        autoprefixer: {},
-        cssnano: {},
-        'postcss-preset-env': {},
-    },
+  plugins: {
+    "@tailwindcss/postcss": {},
+    autoprefixer: {},
+    cssnano: {},
+    "postcss-preset-env": {},
+  },
 };

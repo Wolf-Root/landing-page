@@ -1,54 +1,156 @@
 @import "tailwindcss";
 
-* {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+@layer base {
+
+  *,
+  *::before,
+  *::after {
+    @apply box-border
+  }
+
+  html,
+  body {
+    @apply size-full scroll-smooth antialiased;
+  }
+
+  html {
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar {
+    @apply hidden
+  }
+
+  section {
+    @apply scroll-mt-10 md:scroll-mt-16 py-16 md:py-20;
+  }
 }
 
-section {
-    scroll-margin-top: 100px;
+@utility flex-center {
+  @apply flex items-center justify-center;
 }
 
-.animate-marquee {
-    animation: marquee 15s linear infinite;
+@utility flex-between {
+  @apply flex items-center justify-between;
+}
+
+@utility flex-responsive {
+  @apply flex flex-col md:flex-row items-center justify-between;
+}
+
+@utility button {
+  @apply py-2 px-4 md:py-4 md:px-8 bg-blue-600 text-white text-xl font-semibold rounded-2xl cursor-pointer duration-300 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-300 hover:scale-105 active:scale-100;
+}
+
+@utility clip-path-slant {
+  clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)
+}
+
+@utility animate-marquee {
+  animation: marquee 15s linear infinite;
 }
 
 @keyframes marquee {
-    from {
-        transform: translateX(0%);
-    }
+  from {
+    transform: translateX(0%);
+  }
 
-    to {
-        transform: translateX(-50%);
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@layer components {
+
+  /* Company */
+  #Company {
+    img {
+      @apply mx-12 h-auto w-36 object-contain opacity-75 duration-300 hover:opacity-100 hover:grayscale-75 hover:scale-105;
     }
+  }
+
+  /* Schedule & Monitor */
+  #Schedule,
+  #Monitor {
+    @apply max-w-7xl mx-auto;
+
+    >div {
+      @apply flex-responsive gap-12 md:gap-24;
+
+      /* Right side - Image */
+      >div {
+        @apply w-full md:flex-1;
+      }
+
+      /* Left side - Content */
+      >div {
+        @apply w-full md:flex-1;
+
+        span {
+          @apply text-lg md:text-xl font-semibold text-orange-500 uppercase;
+        }
+
+        h2 {
+          @apply text-3xl md:text-4xl font-bold text-neutral-900 capitalize my-5 md:w-4/5;
+        }
+
+        p {
+          @apply text-gray-600 mb-8;
+        }
+
+        a {
+          @apply text-blue-500 text-xl font-semibold flex items-center gap-x-4 duration-300 hover:gap-x-8;
+        }
+      }
+    }
+  }
+
+  /* Pricing */
+  #Pricing {
+
+    /* pricingBoxs */
+    .pricingBoxs {
+      @apply bg-white p-8 rounded-xl shadow-lg duration-300 hover:-translate-y-1;
+
+      h3 {
+        @apply text-lg md:text-xl text-gray-600 mb-4
+      }
+
+      p {
+        @apply text-2xl md:text-3xl font-extrabold mb-6
+      }
+    }
+  }
+
+  /* Testmonials */
+  #Testmonials {
+    button {
+      @apply size-12 rounded-full border border-gray-200 flex items-center justify-center cursor-pointer duration-300 hover:bg-blue-500 hover:text-white;
+    }
+  }
 }
 
 /* Swiper */
 .TestmonialsSwiper {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .TestmonialsSwiper .swiper-slide {
-    height: auto;
+  height: auto;
 }
 
 .TestmonialsSwiper .swiper-slide-next::after,
 .TestmonialsSwiper .swiper-slide-prev::after {
-    display: none;
+  display: none;
 }
 
 .swiper-slide-next,
 .swiper-slide-prev {
-    display: none;
+  display: none;
 }
 
 #Swiper-button-next.swiper-button-disabled,
 #Swiper-button-prev.swiper-button-disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-}
-
-/* Newsletter */
-#Newsletter .clip-path-slant {
-    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)
+  cursor: not-allowed;
+  opacity: 0.5;
 }
